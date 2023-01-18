@@ -1,0 +1,197 @@
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+img,
+span,
+input,
+button,
+ion-icon { display: block; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img { height: auto; }
+
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input { width: 100%; }
+
+button { cursor: pointer; }
+
+ion-icon {
+  pointer-events: none;
+  color: var(--white);
+}
+
+html {
+  font-family: var(--ff-urbanist);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--oxford-blue-2);
+  color: var(--cadet-grey);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  z-index: 1;
+  /* background-image: url('../images/background.jpg'); */
+}
+
+/*-----------------------------------*\
+  #BACKGROUND
+\*-----------------------------------*/
+
+.background img{
+    width: 201vh;
+    height: 40vh;
+}
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--oxford-blue-2);
+    box-shadow: var(--shadow-1);
+    padding-block: 16px;
+    z-index: 4;
+}
+
+#market{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: aqua;
+    display: flex;
+    margin-left: 200px;
+    margin-top: -50px;
+}
+
+#market1{
+  margin-left: 185vh;
+  color: white;
+  font-size: 20px;
+  margin-top: -35px;
+}
+
+.gbr img{
+  border-radius: 50px;
+  margin-left: 177vh;
+  margin-top: -32px;
+  width: 40px;
+
+}
+
+.item{
+  font-size: 35px;
+  color: white;
+  text-align: center;
+  margin-top: 5vh;
+  font-weight: bold;
+}
+
+.section{
+  position: absolute;
+  display: flex;
+}
+.profil{
+  margin-top: 50px;
+  position: absolute;
+  margin-left: 20vh;
+  font-weight: 700;
+  font-size: 20px;
+  color: #888888;
+}
+
+.kotak-isi{
+  width: 40vh;
+  height: 57vh;
+  box-shadow: 2px 3px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 90px;
+  margin-left: 20vh;
+  border-radius: 10px;
+}
+
+.kotak-isi img{
+   margin-left: 26px;
+   margin-top: 20px;
+   border-radius: 10px;
+}
+ 
+.kotak-isi span{
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.foto-profil img{
+  margin-top: -1px;
+}
+
+.foto-profil span{
+  font-size: 10px;
+  margin-left: 70px;
+  margin-top: -30px;
+}
+
+.foto-profil p{
+  font-size: 10px;
+  margin-left: 70px;
+  margin-top: -2px;
+  color: #888888;
+}
+
+.place{
+  width: 119px;
+  height: 35px;
+  background-color: blue;
+  color: white;
+  border-radius: 20px;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.place span{
+  margin: auto;
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+
+.place span{
+  font-size: 15px;
+  margin-left: 25px;
+}
+
+.section-nama{
+  
+
+}
+
+
+
