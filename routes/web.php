@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\ItemController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LelangController;
+use App\Http\Controllers\LobbyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,11 +41,11 @@ Route::post('login/proses','proses');
 Route::get('logout','logout');
 });
 Route::group(['middleware' => ['auth','cekUserLogin:1']], function() {
-Route::resource('beranda',beranda::class);
+Route::resource('beranda',BerandaController::class);
 });
 
 Route::group(['middleware' => ['auth','cekUserLogin:2']], function() {
-Route::resource('lobby',lobby::class);
+Route::get('lobby',[LobbyController::class, 'index']);
 });
 
 //upload

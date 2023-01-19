@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href=".assets/css/reg.css">
+    <link rel="stylesheet" href="./assets/css/reg.css">
 </head>
 <body>
     <div class="foto">
-        <img src=".assets/images/logoAction.jpg" alt="">
+        <img src="./assets/images/logoAuction.svg" alt="">
     </div>
     <div class="upp">
         <p>Sign Up</p>
@@ -50,7 +50,7 @@
         </div>
     </div>
     <div class="latar">
-        <img src=".assets/images/logo2.svg" alt="">
+        <img src="./assets/images/logo2.svg" alt="">
     </div>
 </body>
 </html>

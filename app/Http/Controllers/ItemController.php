@@ -33,7 +33,8 @@ class ItemController extends Controller
     public function landing()
     {
         $data = Barang::all();
-        return view('halaman.user' , compact('data'));
+
+        return view('halaman.user', compact('data'));
     }  
     
     //detail
@@ -41,6 +42,7 @@ class ItemController extends Controller
     {
         $data = Barang::find($id);
         return view('tampilan_detail.detail', compact('data'));
+        // return view('tampilan_detail.detail', compact('data'));
     }
     
 }

@@ -149,6 +149,7 @@
                                         <ion-icon name="flash" aria-hidden="true"></ion-icon>
 
                                         <span class="span"> <a href="/detail/{{$row->id}}">Place Bid</a></span>
+                                        {{-- <span class="span"> <a href="{{ route('detail',$row->id) }}">Place Bid</a></span> --}}
                                     </button>
 
                                     <div class="countdown">
