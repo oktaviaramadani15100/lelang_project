@@ -148,7 +148,7 @@
                                     <button class="btn btn-primary">
                                         <ion-icon name="flash" aria-hidden="true"></ion-icon>
 
-                                        <span class="span"> <a href="/detail">Place Bid</a></span>
+                                        <span class="span"> <a href="/detail/{{$row->id}}">Place Bid</a></span>
                                     </button>
 
                                     <div class="countdown">
@@ -191,9 +191,47 @@
 
                                             <span class="span"><h5 class="card-title">{{$row->minimum_bid}}</h5></span>
                                         </div>
-
                                     </div>
 
+                                    <!-- <div>
+                                        <p>Starting Date</p>
+
+                                        <div class="card-price">
+                   
+
+                                            <span class="span">{{$row->starting_date}}</span>
+                                        </div>
+                                    </div> -->
+
+                                     <!-- <div>
+                                        <p>Expiration Date</p>
+
+                                        <div class="card-price">
+                    
+
+                                            <span class="span">{{$row->expiration_date}}</span>
+                                        </div>
+                                    </div> -->
+
+                                     <!-- <div>
+                                        <   p>Title</p>
+
+                                            <div class="card-price">
+                   
+
+                                                <span class="span">{{$row->title}}</span>
+                                            </div>
+                                        </div> -->
+
+                                        <!-- <div>
+                                            <p>Description</p>
+
+                                            <div class="card-price">
+                  
+
+                                                <span class="span">{{$row->deskrpsi}}</span>
+                                            </div>
+                                        </div> -->
                                 </div>
 
                             </div>

@@ -24,40 +24,48 @@
                 <li><img class="search" src="assets/images/search-interface-symbol.png" alt=""></li>
             </ul>   
         </div>
+
+        <div class="best">
+            @php
+            $no = 1;
+            @endphp
+            @foreach ($data as $row)
+             <div class="gambar">
+                <img src="{{ asset('/assets/img/'.$row->foto) }}" alt="">
+            </div>
+
+            <div class="btn">
+                <p><span class="span">{{$row->title}}</span></p>
+            </div>
+            <div class="btn2">
+                <h1><h5 class="card-title">{{$row->preview_item}}</h5></h1>
+            </div>
+            <div class="flex">
+                <p><h5 class="card-title">{{$row->price}}</h5></p>
+            </div>
+            <div class="flex2">
+                <p><h5 class="card-title">{{$row->minimum_bid}}</h5></p>
+            </div>
+
+            <div class="lorem">
+                <p><span class="span">{{$row->deskrpsi}}</span></p>
+            </div>
+            <div class="gambar-anime">
+                <img src="assets/images/foto.jpg" alt="">
+            </div>
+            <div class="row">
+                 <div class="alur">
+                    <p>Highest bid by <b>Jonh Biden</b></p>
+                </div>
+
+                <div class="alur-harga">
+                    <p><h5 class="card-title">{{$row->minimum_bid}}</h5></p>
+                </div>
+            </div>
+            @endforeach
+        </div>
+       
         
-        <div class="gambar">
-            <img src="assets/images/contoh-gambar-karya-seni-2-Dimensi-8.jpg" alt="">
-        </div>
-
-        <div class="btn">
-            <p>Design lllustration</p>
-        </div>
-        <div class="btn2">
-            <h1>Minimalist Character</h1>
-        </div>
-        <div class="flex">
-            <p>$5.00</p>
-        </div>
-        <div class="flex2">
-            <p>$4,429.67</p>
-        </div>
-
-        <div class="lorem">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic in optio eligendi, dignissimos commodi dicta esse ullam, perferendis tempora nam, odio corrupti sit ut quisquam voluptatibus est voluptatem molestias assumenda.</p>
-        </div>
-        <div class="gambar-anime">
-            <img src="assets/images/foto.jpg" alt="">
-        </div>
-        <div class="row">
-            <div class="alur">
-                <p>Highest bid by <b>Jonh Biden</b></p>
-            </div>
-
-            <div class="alur-harga">
-                <p>$4,429.67</p>
-            </div>
-            
-        </div>
        
         <div class="alur-bawah">
             <p>Auction Ending in</p>

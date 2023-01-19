@@ -23,11 +23,9 @@ use App\Http\Controllers\LelangController;
 
 // Route::get('/tampilan', [LelangController::class, 'index'])->name('tampilan');
 
+//landingpage
 Route::get('/landing', [ItemController::class , 'landing']);
 
-Route::get('/detail', function(){
-    return view('detail');
-});
 
 //login & register
 Route::get('register', [UserController::class, 'register'])->name('register');
@@ -53,5 +51,6 @@ Route::get('/market', [ItemController::class, 'index']);
 Route::get('/tambah_detail', [ItemController::class, 'barang'])->name('tambah_detail');
 Route::post('/insert_data', [ItemController::class, 'insert_detail'])->name('insert_data');
 
-//landingpage
+//detail
+Route::get('/detail/{$id}', [ItemController::class, 'from_detail'])->name('detail');
 

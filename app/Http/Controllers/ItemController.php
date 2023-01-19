@@ -34,6 +34,13 @@ class ItemController extends Controller
     {
         $data = Barang::all();
         return view('halaman.user' , compact('data'));
-    }   
+    }  
+    
+    //detail
+    public function from_detail($id)
+    {
+        $data = Barang::find($id);
+        return view('tampilan_detail.detail', compact('data'));
+    }
     
 }

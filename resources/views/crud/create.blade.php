@@ -17,6 +17,9 @@
 <!-- 
 - favicon
 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,300&family=Lato:wght@100&family=Lobster&family=Playfair+Display:ital@1&family=Poppins:wght@100&family=Roboto:ital,wght@0,100;0,300;0,500;1,100&display=swap" rel="stylesheet">
 <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon">
 <link rel="shortcut icon" href="./favicon-16x16.png" type="image/x-icon">
 <link rel="shortcut icon" href="./android-chrome-192x192.png" type="image/x-icon">
@@ -33,6 +36,7 @@
 - custom css link
 -->
 <link rel="stylesheet" href="./assets/css/market.css">
+
 </head>
 <body id="top">
                 <!-- 
@@ -40,27 +44,32 @@
             -->
 
 <header class="header" data-header>
+<div class="wp">
+        <img src="../assets/images/latar2.jpg" alt="" style="box-sizing: border-box;position: absolute;width: 100%;height: 300px;left: 0;top: 0;">
+    </div>
 <div class="container">
 
     <a href="#">
-    <img src="./assets/images/logoAuction.svg" width="65" height="" alt="Metalink home" class="logo">
+    <img src="./assets/images/logocr.svg" width="65" height="" alt="Metalink home" class="logo" style="position: absolute;">
     </a>
 
     <nav class="navbar" data-navbar>
-    <ul class="navbar-list">
+    <ul class="navbar-list" style="position: absolute;left: 990px;">
 
         <li>
-        <a href="index.html" class="navbar-link label-lg">Home</a>
+        <a href="index.html" class="navbar-link label-lg" style="color:white;">Home</a>
         </li>
 
         <li>
-        <a href="market.html" class="navbar-link label-lg">Marketplace</a>
+        <a href="market.html" class="navbar-link label-lg" style="color:white;">Marketplace</a>
         </li>
 
         <li>
-        <a href="#" class="navbar-link label-lg">Create</a>
+        <a href="#" class="navbar-link label-lg" style="color:white;">Create</a>
         </li>
     </nav>
+
+   
 
     <div class="header-action">
 
@@ -97,9 +106,7 @@
     -->
    
     <section class="page-header" aria-label="home">
-        <h2 style="color: black;">Marketplace</h2>
-
-        <p style="color: black;">Lihat Karya Lainya</p>
+        <h2 style="z-index: 100;font-family: 'Poppins'; font-weight: 900 ;">Marketplace</h2>
     </section>
 
    <!-- produk -->
