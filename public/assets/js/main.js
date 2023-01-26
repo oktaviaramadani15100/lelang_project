@@ -1,9 +1,9 @@
 const countdown = () => {
-    const countDate = new Date('Januari 13, 2023 00:00:00').getTime();
+    const countDate = new Date('Januari 30, 2023 00:00:00').getTime();
     const now = new Date();
 
     const gap = countDate - now;
-
+     
     //set up 
     const second = 1000;
     const minute = second * 60;

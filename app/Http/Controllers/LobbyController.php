@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class LobbyController extends Controller
 {
     public function index(){
-        $data = Barang::all();
+        $data = Barang::with(['user'])->get();
         return view('halaman.user', compact('data'));
     }
 

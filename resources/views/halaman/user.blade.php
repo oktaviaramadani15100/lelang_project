@@ -61,11 +61,15 @@
                     </li>
                     
                     <li>
-                        <a href="#" class="navbar-link label-lg">Marketplace</a>
+                        <a href="/market" class="navbar-link label-lg">Marketplace</a>
                     </li>
 
                     <li>
                         <a href="#" class="navbar-link label-lg">Create</a>
+                    </li>
+
+                    <li>
+                        <a href="/sesi/logout" class="navbar-link label-lg">Logout</a>
                     </li>
             </nav>
 
@@ -149,13 +153,31 @@
                                         <ion-icon name="flash" aria-hidden="true"></ion-icon>
 
                                         <span class="span"> <a href="/detail/{{$row->id}}">Place Bid</a></span>
-                                        {{-- <span class="span"> <a href="{{ route('detail',$row->id) }}">Place Bid</a></span> --}}
                                     </button>
 
                                     <div class="countdown">
                                         <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                                        <span class="span">5d 04h 18m 04s</span>
+                                        <!-- <span class="span">5d 04h 18m 04s</span> -->
+                                        <div class="container-day">
+                                            <h3 class="day">00</h3>
+                                            <span>d</span>
+                                        </div>
+
+                                        <div class="container-hours">
+                                            <h3 class="hours">00</h3>
+                                            <span>h</span>
+                                        </div>
+
+                                        <div class="container-minutes">
+                                            <h3 class="minute">00</h3>
+                                            <span>m</span>
+                                        </div>
+
+                                        <div class="container-second">
+                                            <h3 class="second">00</h3>
+                                            <span>s</span>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -163,7 +185,10 @@
                                     <img src="./assets/images/avatar-8.jpg" width="32" height="32" loading="lazy"
                                         alt="StreetBoy profile" class="img">
 
-                                    <a href="#" class="">@StreetBoy</a>
+                                    <div class="card-profile">                
+                                        <a href="#" class="">{{ '@'.$row->user->username }}</a>
+                                    </div>
+                                   
                                 </div>
 
                                 <h3 class="title-sm card-title">
@@ -238,366 +263,6 @@
                             </div>
                         </li>
                         @endforeach
-                        
-                        <li>
-                            <div class="discover-card card">
-
-                                <div class="card-banner img-holder" style="--width: 500; --height: 500;">
-                                    <img src="./assets/images/showcase-7.jpg" width="500" height="500" loading="lazy"
-                                        alt="Windchime #768" class="img-cover">
-
-                                    <button class="btn btn-primary">
-                                        <ion-icon name="flash" aria-hidden="true"></ion-icon>
-
-                                        <span class="span">Place Bid</span>
-                                    </button>
-
-                                    <div class="countdown">
-                                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                        <span class="span">5d 04h 18m 04s</span>
-                                    </div>
-                                </div>
-
-                                <div class="card-profile">
-                                    <img src="./assets/images/avatar-7.jpg" width="32" height="32" loading="lazy"
-                                        alt="CutieGirl profile" class="img">
-
-                                    <a href="#" class="">@CutieGirl</a>
-                                </div>
-
-                                <h3 class="title-sm card-title">
-                                    <a href="#" class="">Windchime #768</a>
-                                </h3>
-
-                                <div class="card-meta">
-
-                                    <div>
-                                        <p>Price</p>
-
-                                        <div class="card-price">
-                                            <img src="./assets/images/money.svg" width="10" height="20" loading="lazy"
-                                                alt="ethereum icon">
-
-                                            <span class="span">29,00</span>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <p>Highest Bid</p>
-
-                                        <div class="card-price">
-                                            <img src="./assets/images/money.svg" width="10" height="20" loading="lazy"
-                                                alt="ethereum icon">
-
-                                            <span class="span">29,00</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="discover-card card">
-
-                                <div class="card-banner img-holder" style="--width: 500; --height: 500;">
-                                    <img src="./assets/images/showcase-6.gif" width="500" height="500" loading="lazy"
-                                        alt="Probably A Label #3277" class="img-cover">
-
-                                    <button class="btn btn-primary">
-                                        <ion-icon name="flash" aria-hidden="true"></ion-icon>
-
-                                        <span class="span">Place Bid</span>
-                                    </button>
-
-                                    <div class="countdown">
-                                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                        <span class="span">5d 04h 18m 04s</span>
-                                    </div>
-                                </div>
-
-                                <div class="card-profile">
-                                    <img src="./assets/images/avatar-6.gif" width="32" height="32" loading="lazy"
-                                        alt="ButterFly profile" class="img">
-
-                                    <a href="#" class="">@ButterFly</a>
-                                </div>
-
-                                <h3 class="title-sm card-title">
-                                    <a href="#" class="">Probably A Label #3277</a>
-                                </h3>
-
-                                <div class="card-meta">
-
-                                    <div>
-                                        <p>Price</p>
-
-                                        <div class="card-price">
-                                            <img src="./assets/images/money.svg" width="10" height="20" loading="lazy"
-                                                alt="ethereum icon">
-
-                                            <span class="span">29,00</span>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <p>Highest Bid</p>
-
-                                        <div class="card-price">
-                                            <img src="./assets/images/money.svg" width="10" height="20" loading="lazy"
-                                                alt="ethereum icon">
-
-                                            <span class="span">29,00</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="discover-card card">
-
-                                <div class="card-banner img-holder" style="--width: 500; --height: 500;">
-                                    <img src="./assets/images/showcase-5.jpg" width="500" height="500" loading="lazy"
-                                        alt="Probably A Label #1711" class="img-cover">
-
-                                    <button class="btn btn-primary">
-                                        <ion-icon name="flash" aria-hidden="true"></ion-icon>
-
-                                        <span class="span">Place Bid</span>
-                                    </button>
-
-                                    <div class="countdown">
-                                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                        <span class="span">5d 04h 18m 04s</span>
-                                    </div>
-                                </div>
-
-                                <div class="card-profile">
-                                    <img src="./assets/images/avatar-5.jpg" width="32" height="32" loading="lazy"
-                                        alt="NorseQueen profile" class="img">
-
-                                    <a href="#" class="">@NorseQueen</a>
-                                </div>
-
-                                <h3 class="title-sm card-title">
-                                    <a href="#" class="">Probably A Label #1711</a>
-                                </h3>
-
-                                <div class="card-meta">
-
-                                    <div>
-                                        <p>Price</p>
-
-                                        <div class="card-price">
-                                            <img src="./assets/images/money.svg" width="10" height="20" loading="lazy"
-                                                alt="ethereum icon">
-
-                                            <span class="span">29,00</span>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <p>Highest Bid</p>
-
-                                        <div class="card-price">
-                                            <img src="./assets/images/money.svg" width="10" height="20" loading="lazy"
-                                                alt="ethereum icon">
-
-                                            <span class="span">29,00</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="discover-card card">
-
-                                <div class="card-banner img-holder" style="--width: 500; --height: 500;">
-                                    <img src="./assets/images/showcase-4.jpg" width="500" height="500" loading="lazy"
-                                        alt="Shibuya Scramble Punks" class="img-cover">
-
-                                    <button class="btn btn-primary">
-                                        <ion-icon name="flash" aria-hidden="true"></ion-icon>
-
-                                        <span class="span">Place Bid</span>
-                                    </button>
-
-                                    <div class="countdown">
-                                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                        <span class="span">5d 04h 18m 04s</span>
-                                    </div>
-                                </div>
-
-                                <div class="card-profile">
-                                    <img src="./assets/images/avatar-4.jpg" width="32" height="32" loading="lazy"
-                                        alt="BigBull profile" class="img">
-
-                                    <a href="#" class="">@BigBull</a>
-                                </div>
-
-                                <h3 class="title-sm card-title">
-                                    <a href="#" class="">Shibuya Scramble Punks</a>
-                                </h3>
-
-                                <div class="card-meta">
-
-                                    <div>
-                                        <p>Price</p>
-
-                                        <div class="card-price">
-                                            <img src="./assets/images/money.svg" width="10" height="20" loading="lazy"
-                                                alt="ethereum icon">
-
-                                            <span class="span">29,00</span>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <p>Highest Bid</p>
-
-                                        <div class="card-price">
-                                            <img src="./assets/images/money.svg" width="10" height="20" loading="lazy"
-                                                alt="ethereum icon">
-
-                                            <span class="span">29,00</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="discover-card card">
-
-                                <div class="card-banner img-holder" style="--width: 500; --height: 500;">
-                                    <img src="./assets/images/showcase-3.jpg" width="500" height="500" loading="lazy"
-                                        alt="Probably A Label #650" class="img-cover">
-
-                                    <button class="btn btn-primary">
-                                        <ion-icon name="flash" aria-hidden="true"></ion-icon>
-
-                                        <span class="span">Place Bid</span>
-                                    </button>
-
-                                    <div class="countdown">
-                                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                        <span class="span">5d 04h 18m 04s</span>
-                                    </div>
-                                </div>
-
-                                <div class="card-profile">
-                                    <img src="./assets/images/avatar-3.jpg" width="32" height="32" loading="lazy"
-                                        alt="Angel profile" class="img">
-
-                                    <a href="#" class="">@Angel</a>
-                                </div>
-
-                                <h3 class="title-sm card-title">
-                                    <a href="#" class="">Probably A Label #650</a>
-                                </h3>
-
-                                <div class="card-meta">
-
-                                    <div>
-                                        <p>Price</p>
-
-                                        <div class="card-price">
-                                            <img src="./assets/images/money.svg" width="10" height="20" loading="lazy"
-                                                alt="ethereum icon">
-
-                                            <span class="span">29,00</span>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <p>Highest Bid</p>
-
-                                        <div class="card-price">
-                                            <img src="./assets/images/money.svg" width="10" height="20" loading="lazy"
-                                                alt="ethereum icon">
-
-                                            <span class="span">29,00</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="discover-card card">
-
-                                <div class="card-banner img-holder" style="--width: 500; --height: 500;">
-                                    <img src="./assets/images/showcase-2.jpg" width="500" height="500" loading="lazy"
-                                        alt="Looki #0147" class="img-cover">
-
-                                    <button class="btn btn-primary">
-                                        <ion-icon name="flash" aria-hidden="true"></ion-icon>
-
-                                        <span class="span">Place Bid</span>
-                                    </button>
-
-                                    <div class="countdown">
-                                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                        <span class="span">10d 23h 24m 10s</span>
-                                    </div>
-                                </div>
-
-                                <div class="card-profile">
-                                    <img src="./assets/images/avatar-2.jpg" width="32" height="32" loading="lazy"
-                                        alt="CrazyAnyone profile" class="img">
-
-                                    <a href="#" class="">@CrazyAnyone</a>
-                                </div>
-
-                                <h3 class="title-sm card-title">
-                                    <a href="#" class="">Looki #0147</a>
-                                </h3>
-
-                                <div class="card-meta">
-
-                                    <div>
-                                        <p>Price</p>
-
-                                        <div class="card-price">
-                                            <img src="./assets/images/money.svg" width="10" height="20" loading="lazy"
-                                                alt="ethereum icon">
-
-                                            <span class="span">29,00</span>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <p>Highest Bid</p>
-
-                                        <div class="card-price">
-                                            <img src="./assets/images/money.svg" width="10" height="20" loading="lazy"
-                                                alt="ethereum icon">
-
-                                            <span class="span">29,00</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
 
                         <li>
                             <div class="discover-card card">
@@ -1326,6 +991,7 @@
   -->
             <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
             <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            <script src="../assets/js/main.js"></script>
 
 </body>
 </html>

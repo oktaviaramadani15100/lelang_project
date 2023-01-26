@@ -46,6 +46,7 @@ Route::resource('beranda',BerandaController::class);
 
 Route::group(['middleware' => ['auth','cekUserLogin:2']], function() {
 Route::get('lobby',[LobbyController::class, 'index']);
+
 });
 
 //upload
@@ -53,6 +54,17 @@ Route::get('/market', [ItemController::class, 'index']);
 Route::get('/tambah_detail', [ItemController::class, 'barang'])->name('tambah_detail');
 Route::post('/insert_data', [ItemController::class, 'insert_detail'])->name('insert_data');
 
-//detail
-Route::get('/detail/{$id}', [ItemController::class, 'from_detail'])->name('detail');
 
+//1-m
+Route::get('/barang/user', [ItemController::class, 'user']);
+
+//profil
+Route::get('/profil', [ItemController::class, 'profil']);
+Route::get('/detail/{id}', [ItemController::class, 'from_detail'])->name('detail');
+
+// Route::get('/detail/{id}', function () {
+//     return 'TEST';
+// });
+
+//logout
+Route::get('/sesi/logout', [ItemController::class, 'logout']);

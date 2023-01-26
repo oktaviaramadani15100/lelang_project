@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('barang', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("user_id")->nullable();
             $table->string('preview_item');
             $table->bigInteger('price');
             $table->bigInteger('minimum_bid');

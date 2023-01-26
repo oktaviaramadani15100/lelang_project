@@ -42,6 +42,7 @@
                 <div class="con">
                     <input class="form-control" type="password" placeholder="Confrim Password" name="password_confirm" />
                 </div>
+                <input type="text" value="2" name="level" style="display: none;">
                 <div class="Reg">
                     <button class="butoon">Register</button> <br>  
                     <a class="nyambung" href="{{ route('login') }}">have an account ? <span>Login</span> </a>

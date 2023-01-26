@@ -57,7 +57,7 @@
     <ul class="navbar-list" style="position: absolute;left: 990px;">
 
         <li>
-        <a href="index.html" class="navbar-link label-lg" style="color:white;">Home</a>
+        <a href="/lobby" class="navbar-link label-lg" style="color:white;">Home</a>
         </li>
 
         <li>
@@ -129,8 +129,7 @@
 
             <div class="card-profile">
                
-
-                <a href="#" class="">@StreetBoy</a>
+                <a href="#" class="">{{ '@'.$row->user->username }}</a>
             </div>
             
             <div class="card-profile">

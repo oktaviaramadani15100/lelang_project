@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,300&family=Lato:wght@100&family=Lobster&family=Playfair+Display:ital@1&family=Poppins:wght@100&family=Roboto:ital,wght@0,100;0,300;0,500;1,100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/lengkap.css">
+    <link rel="stylesheet" href="../assets/css/lengkap.css">
 </head>
 <body>
     <div class="container">
@@ -17,7 +17,7 @@
                 <li><img class="img" src="assets/images/logoAuction.svg" alt="" ></li>
                 <li><a href="" style="margin-left: -20px;">marketplace</a></li>
                 <li><input placeholder="search" type="text"></li>
-                <li><a href="">Upload</a></li> 
+                <li><a href="/lobby">Lobby</a></li> 
                 <li><a href="">Saldo</a></li> 
                 <li><img class="logo-admin" src="assets/images/admin.jpg" alt=""></li>
                 <li><a href="" class="admin">Admin</a></li>
@@ -26,29 +26,27 @@
         </div>
 
         <div class="best">
-            @php
-            $no = 1;
-            @endphp
-            @foreach ($data as $row)
              <div class="gambar">
-                <img src="{{ asset('/assets/img/'.$row->foto) }}" alt="">
+                <img src="{{ asset('/assets/img').'/'.$data->foto }}" alt="">
+                <!-- <img src="{{ asset('/assets/img'.$data->foto)}}" alt=""> -->
+
             </div>
 
             <div class="btn">
-                <p><span class="span">{{$row->title}}</span></p>
+                <p><span class="span">{{$data->title}}</span></p>
             </div>
             <div class="btn2">
-                <h1><h5 class="card-title">{{$row->preview_item}}</h5></h1>
+                <h1><h5 class="card-title">{{$data->preview_item}}</h5></h1>
             </div>
             <div class="flex">
-                <p><h5 class="card-title">{{$row->price}}</h5></p>
+                <p><h5 class="card-title">{{$data->price}}</h5></p>
             </div>
             <div class="flex2">
-                <p><h5 class="card-title">{{$row->minimum_bid}}</h5></p>
+                <p><h5 class="card-title">{{$data->minimum_bid}}</h5></p>
             </div>
 
             <div class="lorem">
-                <p><span class="span">{{$row->deskrpsi}}</span></p>
+                <p><span class="span">{{$data->deskrpsi}}</span></p>
             </div>
             <div class="gambar-anime">
                 <img src="assets/images/foto.jpg" alt="">
@@ -59,10 +57,9 @@
                 </div>
 
                 <div class="alur-harga">
-                    <p><h5 class="card-title">{{$row->minimum_bid}}</h5></p>
+                    <p><h5 class="card-title">{{$data->minimum_bid}}</h5></p>
                 </div>
             </div>
-            @endforeach
         </div>
        
         
