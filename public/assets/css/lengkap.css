@@ -7,10 +7,79 @@
     margin-top: 25px;
 }
 
+.con .sal {
+    position: absolute;
+    width: 59px;
+    height: 30px;
+    left: 1120px;
+    top: 66px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #315AFE;
+}
+
+.con .sald {
+    position: absolute;
+    width: 74px;
+    height: 30px;
+    left: 998px;
+    top: 66px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #315AFE;
+}
+
+.con .mk{
+    position: absolute;
+    width: 125px;
+    height: 30px;
+    left: 278px;
+    top: 65px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #315AFE;
+}
+
+.con .sc input{
+    position: absolute;
+    width: 450px;
+    height: 60px;
+    left: 495px;
+    top: 65px;
+    padding: 0px 0px 0px 20px;
+    border: none;
+    background: #E6EAFF;
+    border-radius: 40px;
+}
+.con .adm {
+    position: absolute;
+    width: 66px;
+    height: 30px;
+    left: 1266px;
+    top: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #315AFE;
+}
+
 .con .img{
-    width: 70px;
-    margin-top: 20px;
-    margin-left: -150px;
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    left: 100px;
+    top: 60px;
 }
 
 .con li{
@@ -47,18 +116,7 @@
     font-size: 20px;
 }
 
-.con ul input{
-    margin-left: 20px;
-    width: 280px;
-    height: 35px;
-    border-radius: 40px;
-    background-color: #CFF5E7;
-    border: none;
-    box-sizing: border-box;
-    padding-left:40px;
-    font-size: 15px;
 
-}
 
 .con ul li a img{
     width: 20px;
@@ -81,7 +139,7 @@
 .gambar img{
    width: 500px;
    margin-left: 100px;
-   margin-top: 100px;
+   margin-top: 200px;
    border-radius: 30px;
    box-shadow: 2px 3px 4px 4px rgba(0, 0, 0, 0.25);
 }

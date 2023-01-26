@@ -64,4 +64,10 @@ class ItemController extends Controller
         return redirect('login')->with('succes', 'berhasil logout');
     }
 
+    public function profil()
+    {
+        $data = Barang::all();
+        return view('profil.profil' , compact('data')); 
+    }
+
 }

@@ -72,8 +72,8 @@
             </div>
 
             
-           <div class="tam2">
-            <img src="./assets/images/logo2.svg" alt="">
+           <div class="tam2" >
+            <img src="../assets/images/logo2.svg" alt="" style="height: 770px;">
            </div>
             
             

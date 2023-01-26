@@ -14,13 +14,27 @@
     <div class="container">
         <div class="con">
             <ul>
-                <li><img class="img" src="assets/images/logoAuction.svg" alt="" ></li>
-                <li><a href="" style="margin-left: -20px;">marketplace</a></li>
-                <li><input placeholder="search" type="text"></li>
-                <li><a href="/lobby">Lobby</a></li> 
-                <li><a href="">Saldo</a></li> 
-                <li><img class="logo-admin" src="assets/images/admin.jpg" alt=""></li>
+                <li><img class="img" src="../assets/images/logoAuction.svg" alt="" ></li>
+                <div class="mk">
+                    <li><a href="" style="margin-left: -20px;">marketplace</a></li>
+                </div>
+                
+                <div class="sc">
+                    <li><input placeholder="search" type="text"></li>
+                </div>
+                
+                <div class="sald">
+                    <li><a href="/lobby">Lobby</a></li>
+                </div>
+                
+                <div class="sal">
+                    <li><a href="">Saldo</a></li> 
+                </div> 
+                <div class="adm">
+                    <li><img class="logo-admin" src="./assets/images/admin.jpg" alt=""></li>
                 <li><a href="" class="admin">Admin</a></li>
+                </div>
+                
                 <li><img class="search" src="assets/images/search-interface-symbol.png" alt=""></li>
             </ul>   
         </div>

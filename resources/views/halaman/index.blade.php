@@ -299,7 +299,7 @@
 
 </head>
 <body>
-   <div class="foto1"><img src=".assets/images/background.jpg" alt=""></div> 
+   <div class="foto1"><img src="..assets/images/background.jpg" alt=""></div> 
     <div class="taru"><p>Taruna Bhakti</p></div>
     <div class="put"></div>
     <div class="bare"><p>Nama Barang :</p></div>
