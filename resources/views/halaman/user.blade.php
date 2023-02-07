@@ -177,26 +177,7 @@
                   <div class="countdown">
                     <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                    <!-- <span class="span" >5d 04h 18m 04s</span> -->
-                    <div class="container-day">
-                      <h3 class="day">00</h3>
-                      <span>d</span>
-                    </div>
-
-                  <div class="container-hours">
-                      <h3 class="hours">00</h3>
-                      <span>h</span>
-                  </div>
-
-                  <div class="container-minutes">
-                      <h3 class="minute">00</h3>
-                      <span>m</span>
-                  </div>
-
-                  <div class="container-second">
-                      <h3 class="second">00</h3>
-                      <span>s</span>
-                  </div>
+                    <p id="demo"></p>
                   </div>
                 </div>
 

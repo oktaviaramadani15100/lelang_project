@@ -1,25 +1,28 @@
-const countdown = () => {
-    const countDate = new Date('Febuari 10, 2023 00:00:00').getTime();
-    const now = new Date();
+// Set the date we're counting down to
+var countDownDate = new Date("Feb 8, 2023 15:37:25").getTime();
 
-    const gap = countDate - now;
-     
-    //set up 
-    const second = 1000;
-    const minute = second * 60;
-    const hours = minute * 60;
-    const day = hours * 24;
+// Update the count down every 1 second
+var x = setInterval(function() {
 
-    //calcute 
-    const textDay = Math.floor(gap / day);
-    const textHour = Math.floor((gap % day) / hours);
-    const textMinute = Math.floor((gap % hours) / minute);
-    const textSecond = Math.floor((gap % minute) / second);
+  // Get today's date and time
+  var now = new Date().getTime();
 
-    //update 
-    document.querySelector('.day').innerText = textDay;
-    document.querySelector('.hours').innerText = textHour;
-    document.querySelector('.minute').innerText = textMinute;
-    document.querySelector('.second').innerText = textSecond;
-};
-setInterval(countdown, 1000);
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "MAAF WAKTU lelang habis";
+  }elseif()
+}, 1000);
