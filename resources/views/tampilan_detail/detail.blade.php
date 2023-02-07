@@ -1,126 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,300&family=Lato:wght@100&family=Lobster&family=Playfair+Display:ital@1&family=Poppins:wght@100&family=Roboto:ital,wght@0,100;0,300;0,500;1,100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/lengkap.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 
+- primary meta tags
+-->
+<title>Metalink - Discover rate collection or Arts & NFTs</title>
+<meta name="title" content="Metalink - Discover rate collection or Arts & NFTs">
+<meta name="description" content="This is a NFT html template made by codewithsadee">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- 
+- favicon
+-->
+<link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon">
+<link rel="shortcut icon" href="./favicon-16x16.png" type="image/x-icon">
+<link rel="shortcut icon" href="./android-chrome-192x192.png" type="image/x-icon">
+<link rel="shortcut icon" href="./android-chrome-512x512.png" type="image/x-icon">
+
+<!-- 
+- google font link
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<!-- 
+- custom css link
+-->
+<link rel="stylesheet" href="../assets/css/detail.css">
+
 </head>
-<body>
-    <div class="container">
-        <div class="con">
-            <ul>
-                <li><img class="img" src="../assets/images/logoAuction.svg" alt="" ></li>
-                <div class="mk">
-                    <li><a href="" style="margin-left: -20px;">marketplace</a></li>
-                </div>
-                
-                <div class="sc">
-                    <li><input placeholder="search" type="text"></li>
-                </div>
-                
-                <div class="sald">
-                    <li><a href="/lobby">Lobby</a></li>
-                </div>
-                
-                <div class="sal">
-                    <li><a href="">Saldo</a></li> 
+
+<body id="top">
+
+<!-- 
+- #HEADER
+-->
+
+<header class="header" data-header>
+<div class="container">
+
+    <a href="#">
+    <img src="../assets/images/logoAuction.svg" width="65" height="" alt="Metalink home" class="logo">
+    </a>
+
+    <nav class="navbar" data-navbar>
+    <ul class="navbar-list">
+
+        <li>
+        <a href="index.html" class="navbar-link label-lg">Home</a>
+        </li>
+
+        <li>
+        <a href="market.html" class="navbar-link label-lg">Marketplace</a>
+        </li>
+
+        <li>
+        <a href="create.html" class="navbar-link label-lg">Create</a>
+        </li>
+    </nav>
+
+    <div class="header-action">
+
+        <button class="btn-icon primary" aria-label="wallet" onclick="togglePay()">
+            <ion-icon name="wallet-outline"></ion-icon>
+          </button>
+  
+          <div class="sub-pay-wrap" id="subPay">  
+            <div class="sub-pay"> 
+                <div class="uer-info"> 
+                    <h2>SALDO</h2> 
                 </div> 
-                <div class="adm">
-                    <li><img class="logo-admin" src="./assets/images/admin.jpg" alt=""></li>
-                <li><a href="" class="admin">Admin</a></li>
-                </div>
-                
-                <li><img class="search" src="assets/images/search-interface-symbol.png" alt=""></li>
-            </ul>   
-        </div>
+                <hr> 
+            </div> 
+          </div> 
 
-        <div class="best">
-             <div class="gambar">
-                <img src="{{ asset('/assets/img').'/'.$data->foto }}" alt="">
-                <!-- <img src="{{ asset('/assets/img'.$data->foto)}}" alt=""> -->
+    <button class="btn-icon profil-btn" aria-label="Metalink account: Fiona doe">
+        <img src="../assets/images/profile.jpg" width="50" height="50" alt="Fiona doe" class="img-cover" onclick="toggleMenu()">
+    </button>
+    
+    <div class="sub-menu-wrap" id="subMenu">  
+        <div class="sub-menu"> 
+            <div class="uer-info"> 
+                <h2>RAFANSYAH</h2> 
+            </div> 
+            <hr> 
 
-            </div>
+            <a href="profile.html" class="sub-menu-link"> 
+                <img src=".../assets/images/person-outline.svg" alt="">
+                <p>My Profile</p>
+            </a> 
 
-            <div class="btn">
-                <p><span class="span">{{$data->title}}</span></p>
-            </div>
-            <div class="btn2">
-                <h1><h5 class="card-title">{{$data->preview_item}}</h5></h1>
-            </div>
-            <div class="flex">
-                <p><h5 class="card-title">{{$data->price}}</h5></p>
-            </div>
-            <div class="flex2">
-                <p><h5 class="card-title">{{$data->minimum_bid}}</h5></p>
-            </div>
+            <a href="http://" class="sub-menu-link"> 
+                <img src="../assets/images/log-in-outline.svg" alt="">
+                <p>Logout</p> 
+            </a> 
+        </div> 
+    </div> 
+    
 
-            <div class="lorem">
-                <p><span class="span">{{$data->deskrpsi}}</span></p>
-            </div>
-            <div class="gambar-anime">
-                <img src="assets/images/foto.jpg" alt="">
-            </div>
-            <div class="row">
-                 <div class="alur">
-                    <p>Highest bid by <b>Jonh Biden</b></p>
-                </div>
+    <button class="nav-toggle-btn" aria-label="menu toggle" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true" class="default-icon"></ion-icon>
 
-                <div class="alur-harga">
-                    <p><h5 class="card-title">{{$data->minimum_bid}}</h5></p>
-                </div>
-            </div>
-        </div>
-       
-        
-       
-        <div class="alur-bawah">
-            <p>Auction Ending in</p>
-        </div>
-        <div class="countdown">
-                <div class="container-day">
-                    <h3 class="day">00</h3>
-                    <span>Days</span>
-                </div>
+        <ion-icon name="close-outline" aria-hidden="true" class="active-icon"></ion-icon>
+    </button>
 
-                <div class="container-hours">
-                    <h3 class="hours">00</h3>
-                    <span>Hours</span>
-                </div>
-
-                <div class="container-minutes">
-                    <h3 class="minute">00</h3>
-                    <span>Minute</span>
-                </div>
-
-                <div class="container-second">
-                    <h3 class="second">00</h3>
-                    <span>Second</span>
-                </div>
-
-        </div>
-        <div class="profil">
-            <img src="assets/images/foto.jpg" alt="">
-        </div>
-        <div class="nama-profil">
-            <p><b>John Biden</b></p>
-        </div>
-        <div class="nama-profil1">
-            <p>Owener</p>
-        </div>
-        <div class="tombol1">
-            <a href=""><button>Purchase now</button></a>
-        </div>
-        <div class="tombol2">
-            <a href=""><button>Place a Bid</button></a>
-        </div>
     </div>
 
-    <script src="assets/js/main.js"></script>
+</div>
+</header>
+
+
+
+
+
+<main>
+<article>
+
+    <!-- 
+    - #HERO
+    -->
+
+    <section class="section detail" aria-label="home">
+        <div class = "card-wrapper">
+            <div class = "card-detail">
+              <!-- card left -->
+              <div class = "product-imgs">
+                <div class = "img-display">
+                  <div class = "img-showcase">
+                    <img src = "{{ asset('/assets/img').'/'.$data->foto }}" alt = "shoe image">
+                    <img src = "{{ asset('/assets/img').'/'.$data->foto }}" alt = "shoe image">
+                    <img src = "{{ asset('/assets/img').'/'.$data->foto }}" alt = "shoe image">
+                    <img src = "{{ asset('/assets/img').'/'.$data->foto }}" alt = "shoe image">
+                  </div>
+                </div>
+                <div class = "img-select">
+                  <div class = "img-item">
+                    <a href = "#" data-id = "1">
+                      <img src = "{{ asset('/assets/img').'/'.$data->foto }}" alt = "shoe image">
+                    </a>
+                  </div>
+                  <div class = "img-item">
+                    <a href = "#" data-id = "2">
+                      <img src = "{{ asset('/assets/img').'/'.$data->foto }}" alt = "shoe image">
+                    </a>
+                  </div>
+                  <div class = "img-item">
+                    <a href = "#" data-id = "3">
+                      <img src = "{{ asset('/assets/img').'/'.$data->foto }}" alt = "shoe image">
+                    </a>
+                  </div>
+                  <div class = "img-item">
+                    <a href = "#" data-id = "4">
+                      <img src = "{{ asset('/assets/img').'/'.$data->foto }}" alt = "shoe image">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card right -->
+              <div class = "product-content">
+                <h2 class = "product-title">{{$data->preview_item}}</h2>
+                <a href = "#" class = "product-link">{{$data->title}}</a>
+      
+                <div class = "product-price">
+                  <p class = "last-price">Price<span>{{$data->price}}</span></p>
+                  <p class = "new-price">Highest bid by John Biden<span>{{$data->minimum_bid}}</span></p>
+                </div>
+      
+                <div class = "product-detail">
+                  <h2>about this item: </h2>
+                  <p>{{$data->deskrpsi}}</p>
+                  <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.</p> -->
+                </div>
+      
+                <div class = "purchase-info">
+                  <input type = "number" min = "0" value = "1">
+                  <button type = "button" class = "btn">
+                    Place A Bid <i class = "fas fa-shopping-cart"></i>
+                  </button>
+                  <button type = "button" class = "btn">Purchase Now</button>
+                </div>
+      
+                <div class = "social-links">
+                  <p>Share At: </p>
+                  <a href = "#">
+                    <i class = "fab fa-facebook-f"></i>
+                  </a>
+                  <a href = "#">
+                    <i class = "fab fa-twitter"></i>
+                  </a>
+                  <a href = "#">
+                    <i class = "fab fa-instagram"></i>
+                  </a>
+                  <a href = "#">
+                    <i class = "fab fa-whatsapp"></i>
+                  </a>
+                  <a href = "#">
+                    <i class = "fab fa-pinterest"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </section>
+
+
+<!-- 
+- #FOOTER
+-->
+
+<footer class="footer">
+
+<div class="section footer-top">
+    <div class="container">
+
+    <div class="footer-brand">
+
+        <a href="#">
+        <img src="../assets/images/logoAuction.svg" width="60" height="60" loading="lazy" alt="Metalink home">
+        </a>
+
+        <p class="body-md footer-text">
+        Buy, sell and discover exclusive digital assets by the top artists of SMK TARUNA BHAKTI.
+        </p>
+
+    </div>
+
+    <ul class="footer-list">
+
+        <li>
+        <p class="title-lg footer-list-title">Metalink</p>
+        </li>
+
+        <li>
+        <a href="#" class="footer-link">
+            <ion-icon name="chevron-forward"></ion-icon>
+
+            <span class="span">Explore Item</span>
+        </a>
+        </li>
+
+        <li>
+        <a href="#" class="footer-link">
+            <ion-icon name="chevron-forward"></ion-icon>
+
+            <span class="span">Live Auction</span>
+        </a>
+        </li>
+
+        <li>
+        <a href="#" class="footer-link">
+            <ion-icon name="chevron-forward"></ion-icon>
+
+            <span class="span">Marketplace</span>
+        </a>
+        </li>
+
+        <li>
+        <a href="#" class="footer-link">
+            <ion-icon name="chevron-forward"></ion-icon>
+
+            <span class="span">Wallets</span>
+        </a>
+        </li>
+
+        <li>
+        <a href="#" class="footer-link">
+            <ion-icon name="chevron-forward"></ion-icon>
+
+            <span class="span">Create</span>
+        </a>
+        </li>
+
+    </ul>
+
+    <ul class="footer-list">
+
+        <li>
+        <p class="title-lg footer-list-title">Useful Links</p>
+        </li>
+
+        <li>
+        <a href="#" class="footer-link">
+            <ion-icon name="chevron-forward"></ion-icon>
+
+            <span class="span">Terms & Condition</span>
+        </a>
+        </li>
+
+        <li>
+        <a href="#" class="footer-link">
+            <ion-icon name="chevron-forward"></ion-icon>
+
+            <span class="span">Privacy policy</span>
+        </a>
+        </li>
+
+        <li>
+        <a href="#" class="footer-link">
+            <ion-icon name="chevron-forward"></ion-icon>
+
+            <span class="span">Login</span>
+        </a>
+        </li>
+
+    </ul>
+
+    <div class="footer-list">
+
+        <ul>
+
+        <li>
+            <p class="title-lg footer-list-title">Contact Details</p>
+        </li>
+
+        <li class="footer-list-item">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+            <a href="mailto:metalink@nft.com" class="footer-link">metalink@gmail.com</a>
+        </li>
+
+        <li class="footer-list-item">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+
+            <a href="tel:+111 234-567-891" class="footer-link">+62 234-567-891</a>
+        </li>
+
+        </ul>
+
+    </div>
+
+    </div>
+</div>
+    
+</footer>
+
+
+
+
+
+<!-- 
+- #BACK TO TOP
+-->
+
+<a href="#top" class="back-to-top btn-icon" aria-label="back to top" data-back-top-btn>
+<ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+</a>
+
+
+
+
+
+<div class="body-bg-shape"></div>
+
+
+
+
+
+<!-- 
+- custom js link
+-->
+<script src="../assets/js/script.js"></script>
+
+<!-- 
+- ionicon link
+-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>
