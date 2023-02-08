@@ -161,6 +161,7 @@
             $no = 1;
             @endphp
             @foreach ($data as $row)
+            <input type="hidden" name="id_barang" value="{{ $row->id }}">
             <li>
               <div class="discover-card card">
 

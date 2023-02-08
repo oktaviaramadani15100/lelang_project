@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Barang;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Termwind\Components\Dd;
 
 class ItemController extends Controller
 {
@@ -52,22 +54,41 @@ class ItemController extends Controller
     public function from_detail($id)
     {   
         $data = Barang::find($id);
-
+        $ids = $id;
         // dd($data);
-        return view('tampilan_detail.detail', compact('data'));
+        return view('tampilan_detail.detail', compact(['data','ids']));
         // return view('tampilan_detail.detail', compact('data'));
     }
 
+    //logout
     public function logout()
     {
         Auth::logout();
         return redirect('login')->with('succes', 'berhasil logout');
     }
 
+    //profil
     public function profil()
     {
         $data = Barang::all();
         return view('profil.profil' , compact('data')); 
+    }
+
+    public function high(Request $request){
+
+        $data = DB::table('barang')->limit(1)->where('id', $request->id)->get()->pluck('minimum_bid')->first();
+        $plus = $request->bit;
+        
+        if($request->bit < $data){
+            return "harga terlalu rendah";
+        }
+
+       
+        $barang = Barang::where('id',$request->id);
+       $barang->update([
+        'minimum_bid' =>$request->bit
+       ]);
+       return back();
     }
 
 }

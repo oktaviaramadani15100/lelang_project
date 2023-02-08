@@ -54,15 +54,15 @@
     <ul class="navbar-list">
 
         <li>
-        <a href="index.html" class="navbar-link label-lg">Home</a>
+        <a href="/lobby" class="navbar-link label-lg">Home</a>
         </li>
 
         <li>
-        <a href="market.html" class="navbar-link label-lg">Marketplace</a>
+        <a href="/market" class="navbar-link label-lg">Marketplace</a>
         </li>
 
         <li>
-        <a href="create.html" class="navbar-link label-lg">Create</a>
+        <a href="/tambah_detail" class="navbar-link label-lg">Create</a>
         </li>
     </nav>
 
@@ -180,8 +180,12 @@
                 </div>
       
                 <div class = "purchase-info">
-                  <input type = "number" min = "0" value = "1">
-                  <button type = "button" class = "btn">
+                  <form action="/highbit" method="POST">
+                    @csrf
+                  <input name="bit" type = "number" min = "0" value = "1">
+                  <input name="id" style="display: none;" type="text" value="{{$ids}}">
+                  <button type = "submit" style="background-color: #256eff;" class = "btn">
+                  </form>
                     Place A Bid <i class = "fas fa-shopping-cart"></i>
                   </button>
                   <button type = "button" class = "btn">Purchase Now</button>

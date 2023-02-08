@@ -1,10 +1,11 @@
 // Set the date we're counting down to 
-var tanggalTujuan = new Date("Feb 8, 2023 09:42:00").getTime(); 
+var tanggalTujuan = new Date("Feb 8, 2023 13:42:00").getTime();
 var hari;
 var jam;
 var menit; 
 var detik; 
 var point;
+var id_barangs = []
 // Update the count down every 1 second 
 var x = setInterval(function() { 
  
@@ -13,7 +14,7 @@ var x = setInterval(function() {
  
   // Find the distance between now and the count down date 
   var selisih = tanggalTujuan - sekarang; 
-  console.log(selisih)
+  // console.log(selisih)
  
   // Time calculations for days, hours, minutes and seconds 
   hari = Math.floor(selisih / (1000 * 60 * 60 * 24)); 
@@ -30,14 +31,19 @@ var x = setInterval(function() {
   }
   
   // If the count down is finished, write some text 
-  if (selisih < 0) { 
+  if (selisih <= 0) { 
     clearInterval(x);
     var total = document.getElementsByClassName("demo").length;
     for(let i = 0;i < total;i++){
       // console.log(i);
       document.getElementsByClassName("demo")[i].innerHTML = "MAAF WAKTU LELANG HABIS"; 
+
+      if(document.getElementsByClassName("demo")[i].innerHTML == "MAAF WAKTU LELANG HABIS"){
+        id_barangs.push(id_barang[i])
+      }
     } 
   }
  
 }, 1000);
 
+let id_barang = document.getElementsByName("id_barang")

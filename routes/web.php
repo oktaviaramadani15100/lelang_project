@@ -50,9 +50,11 @@ Route::get('lobby',[LobbyController::class, 'index']);
 });
 
 //upload
+Route::post('/highbit', [ItemController::class, 'high']);
 Route::get('/market', [ItemController::class, 'index']);
 Route::get('/tambah_detail', [ItemController::class, 'barang'])->name('tambah_detail');
 Route::post('/insert_data', [ItemController::class, 'insert_detail'])->name('insert_data');
+
 
 
 //1-m
@@ -60,6 +62,8 @@ Route::get('/barang/user', [ItemController::class, 'user']);
 
 //profil
 Route::get('/profil', [ItemController::class, 'profil']);
+
+//detail
 Route::get('/detail/{id}', [ItemController::class, 'from_detail'])->name('detail');
 
 // Route::get('/detail/{id}', function () {
