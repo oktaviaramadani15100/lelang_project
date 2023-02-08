@@ -59,15 +59,15 @@
     <ul class="navbar-list">
 
         <li>
-        <a href="index.html" class="navbar-link label-lg">Home</a>
+        <a href="/lobby" class="navbar-link label-lg">Home</a>
         </li>
 
         <li>
-        <a href="market.html" class="navbar-link label-lg">Marketplace</a>
+        <a href="/market" class="navbar-link label-lg">Marketplace</a>
         </li>
 
         <li>
-        <a href="create.html" class="navbar-link label-lg">Create</a>
+        <a href="/tambah_detail" class="navbar-link label-lg">Create</a>
         </li>
     </nav>
     <form action="/insert_data" method="post" enctype="multipart/form-data">
@@ -150,7 +150,7 @@
     <div class="sub-menu-wrap" id="subMenu">  
         <div class="sub-menu"> 
             <div class="uer-info"> 
-                <h2>RAFANSYAH</h2> 
+                <h2>{{ auth()->user()->username }}</h2> 
             </div> 
             <hr> 
 

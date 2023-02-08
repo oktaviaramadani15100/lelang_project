@@ -88,7 +88,7 @@
     <div class="sub-menu-wrap" id="subMenu">  
         <div class="sub-menu"> 
             <div class="uer-info"> 
-                <h2>RAFANSYAH</h2> 
+                <h2>{{ auth()->user()->username }}</h2> 
             </div> 
             <hr> 
 

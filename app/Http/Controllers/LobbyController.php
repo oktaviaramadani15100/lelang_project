@@ -12,5 +12,15 @@ class LobbyController extends Controller
         return view('halaman.user', compact('data'));
     }
 
+    public function search(Request $request){
+        if($request->has('search')){
+            $user = Barang::where('preview_item', 'LIKE', '%'.$request->search.'%')->get();
+        }
+        else{
+            $user = Barang::all();
+        }
+
+        return view('halaman.user',['user' => $user]);
+    }
 
 }

@@ -138,8 +138,8 @@
             ART collectors!
           </p>
 
-          <form action="" class="hero-form">
-            <input type="text" name="text" required placeholder="Search" class="search-field">
+          <form action="/sesi/search" class="hero-form" method="get">
+            <input type="search" name="search" required placeholder="Search" class="search-field">
           </form>
         </div>
 
@@ -177,7 +177,7 @@
                   <div class="countdown">
                     <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                    <p id="demo"></p>
+                    <p class="demo"></p>
                   </div>
                 </div>
 
