@@ -70,6 +70,9 @@
             <div class="regg">
                 <a href="{{ route('register') }}"><p>Don’t have an account ? <span>Create Now</span> </p></a>
             </div>
+            <div class="google">
+                <a href="{{ route('auth.google') }}" class="button"><p>Google</p></a>
+            </div>
 
             
            <div class="tam2" >
