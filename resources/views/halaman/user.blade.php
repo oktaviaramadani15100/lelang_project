@@ -27,8 +27,7 @@
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <script src="{{ asset('assets/js/jquery.js') }}"></script>
   <!-- 
     - custom css link
   -->
@@ -36,7 +35,7 @@
 
 </head>
 
-<body id="top">
+<body id="top" onload="lelang('{{ csrf_token() }}')">
 
   <!-- 
     - #HEADER
@@ -79,7 +78,7 @@
               <hr> 
           </div> 
         </div> 
-
+        
         <button class="btn-icon profil-btn" aria-label="Metalink account: Fiona doe">
           <img  width="50" height="50" alt="Fiona doe" class="img-cover" onclick="toggleMenu()">
         </button>

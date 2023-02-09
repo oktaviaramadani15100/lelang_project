@@ -78,10 +78,11 @@ Route::get('/sesi/logout', [ItemController::class, 'logout']);
 //search
 Route::get('/sesi/search', [LobbyController::class, 'search']);
 
-
 //login google
 Route::controller(GoogleController::class)->group(function(){
     Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
     Route::get('auth/google/callback', 'handleGoogleCallback');
 
 });
+
+Route::post('/timeout', [LobbyController::class, 'timeOut']);
