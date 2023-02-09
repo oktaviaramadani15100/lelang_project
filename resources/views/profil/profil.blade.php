@@ -130,9 +130,14 @@
             </div> 
           </div> 
 
-    <button class="btn-icon profil-btn" aria-label="Metalink account: Fiona doe">
-        <img src="./assets/images/profile.jpg" width="50" height="50" alt="Fiona doe" class="img-cover" onclick="toggleMenu()">
-    </button>
+        {{-- @if ()
+            
+        @else --}}
+        <button class="btn-icon profil-btn" aria-label="Metalink account: Fiona doe">
+            <a href="/lobby"><img src="./assets/images/profile.jpg" width="50" height="50" alt="Fiona doe" class="img-cover"></a>
+        </button>
+            
+        {{-- @endif --}}
     
     <div class="sub-menu-wrap" id="subMenu">  
         <div class="sub-menu"> 

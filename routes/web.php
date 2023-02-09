@@ -69,7 +69,7 @@ Route::get('/detail/{id}', [ItemController::class, 'from_detail'])->name('detail
 // Route::get('/detail/{id}', function () {
 //     return 'TEST';
 // });
-
+    
 //logout
 Route::get('/sesi/logout', [ItemController::class, 'logout']);
 

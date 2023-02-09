@@ -81,7 +81,7 @@
         </div> 
 
         <button class="btn-icon profil-btn" aria-label="Metalink account: Fiona doe">
-          <img src="./assets/images/profile.jpg" width="50" height="50" alt="Fiona doe" class="img-cover" onclick="toggleMenu()">
+          <img  width="50" height="50" alt="Fiona doe" class="img-cover" onclick="toggleMenu()">
         </button>
       
         <div class="sub-menu-wrap" id="subMenu">  
@@ -138,8 +138,9 @@
             ART collectors!
           </p>
 
-          <form action="/sesi/search" class="hero-form" method="get">
+          <form action="/lobby" method="GET">
             <input type="search" name="search" required placeholder="Search" class="search-field">
+            <button type="submit" style="margin-top: -6%; margin-left: 80%;"><img src="/assets/img/src.svg" alt=""></button>
           </form>
         </div>
 

@@ -35,7 +35,7 @@ class ItemController extends Controller
             "deskrpsi" => $request->deskrpsi,
         ]);
         if($request->hasFile('foto')){
-            $request->file('foto')->move(public_path().'/assets/img', $request->file('foto')->getClientOriginalName());
+            $request->file('fto')->move(public_path().'/assets/img', $request->file('foto')->getClientOriginalName());
             $data->foto = $request->file('foto')->getClientOriginalName();
             $data->save();
         }
