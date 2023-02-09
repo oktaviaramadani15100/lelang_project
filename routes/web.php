@@ -75,3 +75,4 @@ Route::get('/sesi/logout', [ItemController::class, 'logout']);
 
 //search
 Route::get('/sesi/search', [LobbyController::class, 'search']);
+Route::post('/timeout', [LobbyController::class, 'timeOut']);

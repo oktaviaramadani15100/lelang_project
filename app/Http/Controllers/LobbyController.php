@@ -13,12 +13,14 @@ class LobbyController extends Controller
         // $data = Barang::with(['user'])->get();
         if($request->has('search')){
             // $search = $request->search;
-            $data = Barang::where('preview_item','LIKE','%' .$request->search.'%')->paginate(12);
+            $data = Barang::where('preview_item','LIKE','%' .$request->search.'%')->where('status', 'live')->paginate(12);
         }
         else{
-            $data = Barang::all();
+            $data = Barang::all()->where("status", 'live');
         }
-        return view('halaman.user', compact('data'));
+
+        $batasWaktu = Barang::all()->pluck("expiration_date");
+        return view('halaman.user', compact('data', 'batasWaktu'));
         
     }
 
@@ -33,4 +35,9 @@ class LobbyController extends Controller
     //     return view('halaman.user',['data' => $data]);
     // }
 
+    public function timeOut(Request $request){
+        // $dataBarang = Barang::whereIn("id", $request->id)->get();
+
+        return "ok";
+    }
 }

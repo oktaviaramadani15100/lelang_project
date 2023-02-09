@@ -43,7 +43,7 @@
                     <input class="form-control" type="password" placeholder="Confrim Password" name="password_confirm" />
                 </div>
                 <div class="foto">
-                    <input class="form-control" type="img" name="foto" />
+                    <input class="form-control" type="file" name="foto" />
                 </div>
                 <input type="text" value="2" name="level" style="display: none;">
                 <div class="Reg">

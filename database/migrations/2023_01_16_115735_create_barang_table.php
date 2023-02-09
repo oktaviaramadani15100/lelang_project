@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('foto');
             $table->string('deskrpsi');
+            $table->string("status", 5)->default("live");
             $table->timestamps();
         });
     }
