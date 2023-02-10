@@ -70,13 +70,14 @@
         <a href="/tambah_detail" class="navbar-link label-lg">Create</a>
         </li>
     </nav>
+    
     <div class="pos"></div>
     <div class="kd"></div>
     <div class="avatar">
         <img src="./assets/images/avatar-1.jpg" alt="">
     </div>
     <div class="nama-pengguna">
-        <p>John Biden</p>
+        <p>{{  auth()->user()->username }}</p>
     </div>
     <div class="dec">Lorem ipsum dolor sit amet consectetur. Eget at viverra eget accumsan id amet </div>
     <div class="avatar2">
@@ -92,7 +93,7 @@
         <img src="./assets/images/avatar-1.jpg" alt="">
     </div>
     <div class="nama-akun">
-        <p>John Biden</p>
+        <p>{{ auth()->user()->username }}</p>
     </div>
     <div class="nama-owner">
         <p>Owner</p>
@@ -134,7 +135,7 @@
             
         @else --}}
         <button class="btn-icon profil-btn" aria-label="Metalink account: Fiona doe">
-            <a href="/lobby"><img src="./assets/images/profile.jpg" width="50" height="50" alt="Fiona doe" class="img-cover"></a>
+            <img src="./assets/images/profile.jpg" width="50" height="50" alt="Fiona doe" class="img-cover" onclick="toggleMenu()">
         </button>
             
         {{-- @endif --}}
